@@ -10,6 +10,8 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
+      - name: Make gradlew executable  # 🔥 Добавьте этот шаг!
+        run: chmod +x gradlew
       - name: Build APK
         run: ./gradlew assembleDebug
       - name: Upload APK
